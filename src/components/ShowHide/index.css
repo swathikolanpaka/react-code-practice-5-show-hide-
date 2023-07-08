@@ -1,0 +1,20 @@
+/* Write your CSS here */
+.bg-container {
+  background-image: linear-gradient(to right, #fa7257, #fc63a7);
+  height: 100vh;
+  text-align: center;
+}
+.heading {
+  color: #ffffff;
+  font-family: Roboto;
+}
+.names-container {
+  display: flex;
+  justify-content: center;
+}
+.btn-first-name {
+  color: #fc63a7;
+}
+.btn-last-name {
+  color: #fc63a7;
+}
