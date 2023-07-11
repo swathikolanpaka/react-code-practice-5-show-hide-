@@ -18,3 +18,11 @@
 .btn-last-name {
   color: #fc63a7;
 }
+
+.text {
+  background-color: #fddddb;
+  height: 10vh;
+  width: 20vh;
+  font-family: Roboto;
+  padding: 8px;
+}

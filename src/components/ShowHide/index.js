@@ -4,28 +4,18 @@ import {Component} from 'react'
 import './index.css'
 
 class ShowHide extends Component {
-  state = {isClicked: true}
+  state = {isFirstClicked: false, isLastClicked: false}
 
   onFirstName = () => {
-    const {isClicked} = this.state
-
-    if (isClicked === true) {
-      return <p>Joe</p>
-    }
-    return null
+    this.setState(prevState => ({isFirstClicked: !prevState.isFirstClicked}))
   }
 
   onLastName = () => {
-    const {isClicked} = this.state
-
-    if (isClicked === true) {
-      return <p>Jonas</p>
-    }
-    return null
+    this.setState(prevState => ({isLastClicked: !prevState.isLastClicked}))
   }
 
   render() {
-    const {isClicked} = this.state
+    const {isFirstClicked, isLastClicked} = this.state
     return (
       <div className="bg-container">
         <h1 className="heading">Show/Hide</h1>
@@ -34,11 +24,14 @@ class ShowHide extends Component {
             <button className="btn-first-name" onClick={this.onFirstName}>
               Show/Hide Firstname
             </button>
+
+            {isFirstClicked ? <p className="text"> Joe</p> : null}
           </div>
           <div className="last-name">
             <button className="btn-last-name" onClick={this.onLastName}>
               Show/Hide Lastname
             </button>
+            {isLastClicked ? <p className="text"> Jonas</p> : null}
           </div>
         </div>
       </div>
